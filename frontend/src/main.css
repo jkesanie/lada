@@ -1,0 +1,76 @@
+html {
+  /*font-family: 'Roboto', sans-serif; */
+}
+
+body {
+  /*
+  font-size: 13px;
+  line-height: 20px;
+  */
+}
+
+h2 {
+  padding-bottom: .3em;
+      font-size: 1.5em;
+      line-height: 1.334;
+      border-bottom: 1px solid #eee;
+      font-weight: 400;
+}
+
+.ui.inverted.menu.squared {
+  border-radius: 0;
+}
+
+
+
+.ui.dimmer {
+  margin-top: 40px;
+}
+
+.selected {
+  background-color: #2185D0!important;
+
+      color: #FFF!important;
+}
+
+.excluded {
+  background-color: #cccccc!important;
+
+      color: #FFF!important;
+}
+
+
+.ui.feed {
+  margin: 1em 0 !important;
+}
+
+.toc {
+  top: 40px;
+}
+
+
+.rv-discrete-color-legend-item__color {
+  height: 25px;
+}
+
+.ui.cards>.green.card, .ui.green.card, .ui.green.cards>.card {
+    box-shadow: 0 0 0 1px #D4D4D5, 0 6px 0 0 #21BA45, 0 1px 3px 0 #D4D4D5 !important;
+}
+
+.ui.cards>.red.card, .ui.red.card, .ui.red.cards>.card {
+    box-shadow: 0 0 0 1px #D4D4D5, 0 6px 0 0 #DB2828, 0 1px 3px 0 #D4D4D5 !important;
+}
+
+
+.scrollable {
+  overflow: scroll;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.noindent {
+  padding-left: 0 !important;
+}

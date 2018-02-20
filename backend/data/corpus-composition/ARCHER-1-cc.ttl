@@ -1,0 +1,1160 @@
+@prefix qb4cc:          <http://data.hulib.helsinki.fi/ns/qb4cc#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dct:        	  <http://purl.org/dc/terms/> .
+@prefix foaf: 			    <http://xmlns.com/foaf/0.1/>.
+@prefix lcd: 			      <http://data.hulib.helsinki.fi/ns/lcd#>.
+@prefix :               <http://github.com/jkesanie/LCD/QB4CC/archer-1/> .
+
+
+
+:archer-1-genres
+  a qb4cc:Genre ;
+  qb:codeList :codelist-genres ;
+.
+
+:archer-1-ccd
+  a qb4cc:CorpusCompositionStructure ;
+  qb4cc:value [
+    rdfs:label "Word count" ;
+    qb:measure qb4cc:wordCount ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Corpus" ;
+    qb:dimension qb4cc:corpus ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Period" ;
+    qb:dimension qb4cc:timePeriod ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Genre" ;
+    qb:dimension :archer-1-genres ;
+  ];
+.
+
+:archer-1-ds
+  a qb4cc:CorpusComposition ;
+  dct:title "ARCHER 1";
+  rdfs:label "ARCHER 1";
+  dct:description "Empty";
+  qb:structure :archer-1-ccd ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+# time period
+
+:A2
+  a qb4cc:TimePeriod ;
+  rdfs:label "1650-1699";
+  lcd:startYear 1650 ;
+  lcd:endYear  1699 .
+
+:A3
+  a qb4cc:TimePeriod ;
+  rdfs:label "1700-1749";
+  lcd:startYear 1700 ;
+  lcd:endYear  1749 .
+
+:A4
+a qb4cc:TimePeriod ;
+rdfs:label "1750-1799";
+lcd:startYear 1750 ;
+lcd:endYear  1799 .
+:A5
+a qb4cc:TimePeriod ;
+rdfs:label "1800-1849";
+lcd:startYear 1800 ;
+lcd:endYear  1849 .
+:A6
+a qb4cc:TimePeriod ;
+rdfs:label "1850-1899";
+lcd:startYear 1850 ;
+lcd:endYear  1899 .
+:A7
+a qb4cc:TimePeriod ;
+rdfs:label "1900-1949";
+lcd:startYear 1900 ;
+lcd:endYear  1949 .
+:A8
+a qb4cc:TimePeriod ;
+rdfs:label "1950-1999";
+lcd:startYear 1950 ;
+lcd:endYear  1990 .
+
+# genres
+:D
+  a skos:Concept ;
+  rdfs:label "drama" ;
+  skos:prefLabel "drama";
+  skos:inScheme :codelist-genres ;
+  lcd:order 2;
+.
+:F
+  a skos:Concept ;
+  rdfs:label "fiction" ;
+  skos:prefLabel "fiction";
+  skos:inScheme :codelist-genres ;
+  lcd:order 3;
+.
+:H
+  a skos:Concept ;
+  rdfs:label "sermons" ;
+  skos:prefLabel "sermons";
+  skos:inScheme :codelist-genres ;
+  lcd:order 4;
+.
+:J
+  a skos:Concept ;
+  rdfs:label "journals/Diaries" ;
+  skos:prefLabel "journals";
+  skos:inScheme :codelist-genres ;
+  lcd:order 5;
+.
+:L
+  a skos:Concept ;
+  rdfs:label "legal" ;
+  skos:prefLabel "legal";
+  skos:inScheme :codelist-genres ;
+  lcd:order 6;
+.
+:M
+  a skos:Concept ;
+  rdfs:label "medicine" ;
+  skos:prefLabel "medicine";
+  skos:inScheme :codelist-genres ;
+  lcd:order 7;
+.
+:N
+  a skos:Concept ;
+  rdfs:label "news" ;
+  skos:prefLabel "news";
+  skos:inScheme :codelist-genres ;
+  lcd:order 8;
+.
+
+:S
+  a skos:Concept ;
+  rdfs:label "Science" ;
+  skos:prefLabel "Science";
+  skos:inScheme :codelist-genres ;
+  lcd:order 10;
+.
+:X
+  a skos:Concept ;
+  rdfs:label "Letters" ;
+  skos:prefLabel "Letters";
+  skos:inScheme :codelist-genres ;
+  lcd:order 11;
+.
+
+# Observations
+
+
+:archer-1-2-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :D ;
+  qb4cc:wordCount  29149;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :F ;
+  qb4cc:wordCount  37274;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :H ;
+  qb4cc:wordCount  11152;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :J ;
+  qb4cc:wordCount  21393;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :L ;
+  qb4cc:wordCount  0;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :M ;
+  qb4cc:wordCount  7526;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :N ;
+  qb4cc:wordCount  24430;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :S ;
+  qb4cc:wordCount  20359;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-a1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A2;
+  qb4cc:genre :X ;
+  qb4cc:wordCount  12681;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+#A3
+:archer-1-2-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 22395 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 43584 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 10669 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 21464 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 16754 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 21631 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 20785 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-a2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A3;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 16417 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+#A4
+
+:archer-1-2-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 23915 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 50069 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 11078 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 21860 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 6603 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 25867 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 20577 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-a3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 12496 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+#A4
+
+:archer-1-2-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 29270 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 56835 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 11097 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 21776 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 26101 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 22790 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 20992 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 14056 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+#A6
+
+:archer-1-2-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 33054 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 48222 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 10959 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :J ;
+  qb4cc:wordCount  22706;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 31931 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 23029 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 21748 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :X ;
+  qb4cc:wordCount  10732;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+#A7
+
+:archer-1-2-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 26921 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 52318 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 10579 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 22084 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 20214 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 21914 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 21380 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 12410 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+#A8
+
+:archer-1-2-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 27609 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 61485 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 10198 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 22248 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 18198 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 24041 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 21353 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 11292 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+# American
+#A4
+
+:archer-1-2-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 15982 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 42424 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 10994 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 22119 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 39396 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 22230 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+:archer-1-10-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-am-a4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A4;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 14058 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+#A5
+
+
+:archer-1-2-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 32987 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+:archer-1-10-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-am-a5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A5;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+
+#A6
+
+
+:archer-1-2-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 26266 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 39505 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 10750 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 22551 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 28362 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 20438 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 21887 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+:archer-1-10-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-am-a6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A6;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 11239 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+#A7
+:archer-1-2-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 21442 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+:archer-1-10-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-am-a7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A7;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+
+#A8
+
+:archer-1-2-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :D ;
+  qb4cc:wordCount 26771 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-3-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :F ;
+  qb4cc:wordCount 44058 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-4-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :H ;
+  qb4cc:wordCount 10430 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-5-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :J ;
+  qb4cc:wordCount 22157 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-6-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :L ;
+  qb4cc:wordCount 25319 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-7-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :M ;
+  qb4cc:wordCount 22559 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-8-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :N ;
+  qb4cc:wordCount 26044 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-10-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :S ;
+  qb4cc:wordCount 0 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.
+
+:archer-1-11-am-a8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :archer-1-ds ;
+  qb4cc:timePeriod :A8;
+  qb4cc:genre :X ;
+  qb4cc:wordCount 14073 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> ;
+.

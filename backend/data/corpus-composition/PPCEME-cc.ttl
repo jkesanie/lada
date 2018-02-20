@@ -1,0 +1,345 @@
+@prefix qb4cc:          <http://data.hulib.helsinki.fi/ns/qb4cc#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dct:        	  <http://purl.org/dc/terms/> .
+@prefix foaf: 			    <http://xmlns.com/foaf/0.1/>.
+@prefix lcd: 			      <http://data.hulib.helsinki.fi/ns/lcd#>.
+@prefix :               <http://github.com/jkesanie/LCD/QB4CC#> .
+
+
+# Corpus composition instances: PPCEME
+
+:ppceme-cord-ccd-1
+  a qb4cc:CorpusCompositionStructure ;
+  qb4cc:value [
+    rdfs:label "Word count" ;
+    qb:measure qb4cc:wordCount ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Corpus" ;
+    qb:dimension qb4cc:corpus ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Period" ;
+    qb:dimension qb4cc:timePeriod ;
+  ];
+.
+
+:ppceme-cord-ccd-2
+  a qb4cc:CorpusCompositionStructure ;
+  qb4cc:value [
+    rdfs:label "Word count" ;
+    qb:measure qb4cc:wordCount ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Corpus" ;
+    qb:dimension qb4cc:corpus ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Genre" ;
+    qb:dimension qb4cc:genre ;
+  ];
+.
+:ppceme-cord-ds-1
+  a qb4cc:CorpusComposition ;
+  dct:title "PPCEME by period";
+  rdfs:label "PPCEME by period";
+  dct:description "Data for the composition has been taken from http://www.helsinki.fi/varieng/CoRD/corpora/PPCEME/basic.html";
+  qb:structure :ppceme-cord-ccd-1 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppceme-cord-ds-2
+  a qb4cc:CorpusComposition ;
+  dct:title "PPCEME by genre";
+  rdfs:label "PPCEME by genre";
+  dct:description "Data for the composition has been taken from http://www.helsinki.fi/varieng/CoRD/corpora/PPCEME/basic.html";
+  qb:structure :ppceme-cord-ccd-2 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+
+# time periods
+
+:E1
+  a qb4cc:TimePeriod ;
+  rdfs:label "1500-1569";
+  lcd:startYear 1500 ;
+  lcd:endYear  1569 .
+
+:E2
+  a qb4cc:TimePeriod ;
+  rdfs:label "1570-1639";
+  lcd:startYear 1570 ;
+  lcd:endYear  1639 .
+
+:E3
+  a qb4cc:TimePeriod ;
+  rdfs:label "1640-1710";
+  lcd:startYear 1640 ;
+  lcd:endYear  1710 .
+
+# genres
+
+:Bible
+  a skos:Concept ;
+  rdfs:label "Bible" ;
+  skos:prefLabel "Bible";
+  lcd:order 1;
+.
+:Travelogue
+  a skos:Concept ;
+  rdfs:label "Travelogue" ;
+  skos:prefLabel "Travelogue";
+  lcd:order 2;
+.
+:DiaryPrivate
+  a skos:Concept ;
+  rdfs:label "Diary, private" ;
+  skos:prefLabel "Diary, private";
+  lcd:order 3;
+.
+:DramaComedy
+  a skos:Concept ;
+  rdfs:label "Drama, comedy" ;
+  skos:prefLabel "Drama, comedy";
+  lcd:order 4;
+.
+:LettersPrivate
+  a skos:Concept ;
+  rdfs:label "Letters, private" ;
+  skos:prefLabel "Letters, private";
+  lcd:order 5;
+.
+:Fiction
+  a skos:Concept ;
+  rdfs:label "Fiction" ;
+  skos:prefLabel "Fiction";
+  lcd:order 6;
+.
+:Law
+  a skos:Concept ;
+  rdfs:label "Law" ;
+  skos:prefLabel "Law";
+  lcd:order 7;
+.
+:EducationalTreatise
+  a skos:Concept ;
+  rdfs:label "Educational treatise";
+  skos:prefLabel "Educational treatise";
+  lcd:order 8;
+.
+:HandbookOther
+  a skos:Concept ;
+  rdfs:label "Handbook, other" ;
+  skos:prefLabel "Handbook, other";
+  lcd:order 9;
+.
+:History
+  a skos:Concept ;
+  rdfs:label "History" ;
+  skos:prefLabel "History";
+  lcd:order 10;
+.
+:ProceedingsTrials
+  a skos:Concept ;
+  rdfs:label "Proceedings, trials";
+  skos:prefLabel "Proceedings, trials";
+  lcd:order 11;
+.
+:Sermon
+  a skos:Concept;
+  rdfs:label "Sermon";
+  skos:prefLabel "Sermon";
+  lcd:order 12;
+.
+:Philosophy
+  a skos:Concept ;
+  rdfs:label "Philosophy" ;
+  skos:prefLabel "Philosophy";
+  lcd:order 13;
+.
+:ScienceOther
+  a skos:Concept ;
+  rdfs:label "Science, other";
+  skos:prefLabel "Science, other";
+  lcd:order 14;
+.
+:LettersNonPrivate
+  a skos:Concept;
+  rdfs:label "Letters, non-private";
+  skos:prefLabel "Letters, non-private";
+  lcd:order 15;
+.
+:BiographyOther
+  a skos:Concept ;
+  rdfs:label "Biography, other" ;
+  skos:prefLabel "Biography, other";
+  lcd:order 16;
+.
+:ScienceMedicine
+  a skos:Concept ;
+  rdfs:label "Science, medicine" ;
+  skos:prefLabel "Science, medicine";
+  lcd:order 17;
+.
+:BiographyAutobiography
+  a skos:Concept;
+  rdfs:label "Biography, autobiography";
+  skos:prefLabel "Biography, autobiography";
+  lcd:order 18;
+.
+
+# Observations
+
+:ppmecc-cord-1-1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-1 ;
+  qb4cc:timePeriod :E1;
+  qb4cc:wordCount 576195 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-1-2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-1 ;
+  qb4cc:timePeriod :E2;
+  qb4cc:wordCount 652799 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-1-3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-1 ;
+  qb4cc:timePeriod :E3;
+  qb4cc:wordCount 565016 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+
+
+:ppmecc-cord-2-1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :Bible;
+  qb4cc:wordCount 134275 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :Travelogue;
+  qb4cc:wordCount 125337 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :DiaryPrivate;
+  qb4cc:wordCount 123106 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :DramaComedy;
+  qb4cc:wordCount 120428 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :LettersPrivate;
+  qb4cc:wordCount 116915 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :Fiction;
+  qb4cc:wordCount 116494 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :Law;
+  qb4cc:wordCount 115863 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :EducationalTreatise;
+  qb4cc:wordCount 113032 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-9
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :HandbookOther;
+  qb4cc:wordCount 112419 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-10
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :History;
+  qb4cc:wordCount 108706 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-11
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :ProceedingsTrials;
+  qb4cc:wordCount 105090 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-12
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :Sermon;
+  qb4cc:wordCount 97400 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-13
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :Philosophy;
+  qb4cc:wordCount 85107 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-14
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :ScienceOther;
+  qb4cc:wordCount 79050 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-15
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :LettersNonPrivate;
+  qb4cc:wordCount 59868 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-16
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :BiographyOther;
+  qb4cc:wordCount 52755 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-17
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :ScienceMedicine;
+  qb4cc:wordCount 41786 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.
+:ppmecc-cord-2-18
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :ppceme-cord-ds-2 ;
+  qb4cc:genre :BiographyAutobiography;
+  qb4cc:wordCount 41379 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> ;
+.

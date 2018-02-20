@@ -1,0 +1,95 @@
+@prefix qb4cc:          <http://data.hulib.helsinki.fi/ns/qb4cc#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dct:        	  <http://purl.org/dc/terms/> .
+@prefix foaf: 			    <http://xmlns.com/foaf/0.1/>.
+@prefix lcd: 			      <http://data.hulib.helsinki.fi/ns/lcd#>.
+@prefix :               <http://github.com/jkesanie/LCD/QB4CC#> .
+
+
+:bnc-ccd
+  a qb4cc:CorpusCompositionStructure ;
+  qb4cc:value [
+    rdfs:label "Word count" ;
+    qb:measure qb4cc:wordCount ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Corpus" ;
+    qb:dimension qb4cc:corpus ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Period" ;
+    qb:dimension qb4cc:timePeriod ;
+  ];
+.
+
+:bnc-ds
+  a qb4cc:CorpusComposition ;
+  dct:title "BNC CC";
+  rdfs:label "BNC CC";
+  dct:description "Taken from http://www.natcorp.ox.ac.uk/docs/URG/BNCdes.html#BNCcompo";
+  qb:structure :bnc-ccd ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/bnc> ;
+.
+
+# time period
+
+:BNCPeriod-1
+  a qb4cc:TimePeriod ;
+  rdfs:label "1960-1974";
+  lcd:startYear 1960 ;
+  lcd:endYear  1974 .
+
+:BNCPeriod-2
+  a qb4cc:TimePeriod ;
+  rdfs:label "1975-1984";
+  lcd:startYear 1975 ;
+  lcd:endYear  1984 .
+
+:BNCPeriod-3
+  a qb4cc:TimePeriod ;
+  rdfs:label "1985-1993";
+  lcd:startYear 1985 ;
+  lcd:endYear  1993 .
+
+:BNCPeriod-x
+  a qb4cc:TimePeriod ;
+  rdfs:label "1960-1993";
+  lcd:startYear 1960 ;
+  lcd:endYear  1993 .
+
+:bnc-obs-1
+    a qb4cc:CorpusPart ;
+    qb4cc:isPartOfComposition :bnc-ds ;
+    qb4cc:timePeriod :BNCPeriod-1;
+    qb4cc:wordCount 1718449 ;
+    qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/bnc> ;
+  .
+
+:bnc-obs-2
+    a qb4cc:CorpusPart ;
+    qb4cc:isPartOfComposition :bnc-ds ;
+    qb4cc:timePeriod :BNCPeriod-2;
+    qb4cc:wordCount 4730889 ;
+    qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/bnc> ;
+  .
+
+:bnc-obs-3
+    a qb4cc:CorpusPart ;
+    qb4cc:isPartOfComposition :bnc-ds ;
+    qb4cc:timePeriod :BNCPeriod-3;
+    qb4cc:wordCount 90082860 ;
+    qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/bnc> ;
+  .
+
+:bnc-obs-4
+    a qb4cc:CorpusPart ;
+    qb4cc:isPartOfComposition :bnc-ds ;
+    qb4cc:timePeriod :BNCPeriod-X;
+    qb4cc:wordCount 1831585 ;
+    qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/bnc> ;
+  .

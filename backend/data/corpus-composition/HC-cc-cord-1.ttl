@@ -1,0 +1,183 @@
+# HC - CoRD version - time period composition
+@prefix qb4cc:          <http://data.hulib.helsinki.fi/ns/qb4cc#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dct:        	  <http://purl.org/dc/terms/> .
+@prefix foaf: 			    <http://xmlns.com/foaf/0.1/>.
+@prefix lcd: 			      <http://data.hulib.helsinki.fi/ns/lcd#>.
+@prefix :               <http://github.com/jkesanie/LCD/QB4CC#> .
+
+
+# Corpus composition instance: HC
+
+:hc-cord1-ccd
+  a qb4cc:CorpusCompositionStructure ;
+  qb4cc:value [
+    rdfs:label "Word count" ;
+    qb:measure qb4cc:wordCount ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Corpus" ;
+    qb:dimension qb4cc:corpus ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Period" ;
+    qb:dimension qb4cc:timePeriod ;
+  ] ;
+.
+:hc-cord1-ds
+  a qb4cc:CorpusComposition ;
+  dct:title "Simple corpus composition of HC using time periods.";
+  rdfs:label "Simple corpus composition of HC using time periods.";
+  dct:description "Data for the composition has been taken from http://www.helsinki.fi/varieng/CoRD/corpora/HelsinkiCorpus/period.html";
+  qb:structure :hc-cord1-ccd ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 2190 ;
+  qb4cc:timePeriod :OE1;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 92050 ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 251630 ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 67380 ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 113010 ;
+  qb4cc:timePeriod :ME1;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 97480 ;
+  qb4cc:timePeriod :ME2;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 184230 ;
+  qb4cc:timePeriod :ME3;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 213850 ;
+  qb4cc:timePeriod :ME4;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs9
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 190160 ;
+  qb4cc:timePeriod :EMod1;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs10
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 189800 ;
+  qb4cc:timePeriod :EMod2 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs11
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-ds ;
+  qb4cc:wordCount 171040 ;
+  qb4cc:timePeriod :EMod3 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:OE1
+  a qb4cc:TimePeriod ;
+  rdfs:label "-850";
+  lcd:startYear 0 ;
+  lcd:endYear  850 .
+
+:OE2
+  a qb4cc:TimePeriod ;
+  rdfs:label "0850-900";
+  lcd:startYear 850 ;
+  lcd:endYear  900 .
+
+:OE3
+  a qb4cc:TimePeriod ;
+  rdfs:label "0950-1050";
+  lcd:startYear 950 ;
+  lcd:endYear  1050 .
+
+:OE4
+  a qb4cc:TimePeriod ;
+  rdfs:label "1050-1150";
+  lcd:startYear 1050 ;
+  lcd:endYear  1150 .
+
+:ME1
+  a qb4cc:TimePeriod ;
+  rdfs:label "1150-1250";
+  lcd:startYear 1150 ;
+  lcd:endYear  1250 .
+
+:ME2
+  a qb4cc:TimePeriod ;
+  rdfs:label "1250-1350";
+  lcd:startYear 1250 ;
+  lcd:endYear  1350 .
+
+:ME3
+  a qb4cc:TimePeriod ;
+  rdfs:label "1350-1420";
+  lcd:startYear 1350 ;
+  lcd:endYear  1420 .
+
+:ME4
+  a qb4cc:TimePeriod ;
+  rdfs:label "1420-1500";
+  lcd:startYear 1420 ;
+  lcd:endYear  1500 .
+
+:EMod1
+  a qb4cc:TimePeriod ;
+  rdfs:label "1500-1570";
+  lcd:startYear 1500 ;
+  lcd:endYear  1570 .
+
+:EMod2
+  a qb4cc:TimePeriod ;
+  rdfs:label "1570-1640";
+  lcd:startYear 1570 ;
+  lcd:endYear  1640 .
+
+:EMod3
+  a qb4cc:TimePeriod ;
+  rdfs:label "1640-1710";
+  lcd:startYear 1640 ;
+  lcd:endYear  1710 .

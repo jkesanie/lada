@@ -1,0 +1,390 @@
+@prefix cube: <http://purl.org/linked-data/cube#> .
+@prefix data: <http://h224.it.helsinki.fi:8080/varieng/data/> .
+@prefix lada: <http://lada/> .
+@prefix lcd: <http://h224.it.helsinki.fi:8080/varieng/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix qb4cc: <http://data.hulib.helsinki.fi/ns/qb4cc#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/+innsbruck+computer+archive+of+machine-readable+english+texts> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ICAMET" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/AusCorp> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "AusCorp" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/CELiST> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CELiST" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/CEPhiT> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEPhiT" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/CONTE-pC> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CONTE-pC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/CoER> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CoER" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/CoNE> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CoNE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/CoSiB> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CoSiB" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ICoMEP> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ICoMEP" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/a+linguistic+atlas+of+late+mediaeval+english> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LALME" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/african+nova+scotian+english+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ANSE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/archer> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ARCHER" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/b-brown> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "B-BROWN" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/base> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BASE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/bawe> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BAWE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/be06> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BE06" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/blob-1931> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BLOB-1931" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/bnc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BNC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/british+national+corpus+-+spoken> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BNC Spoken" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/british+national+corpus+-+written> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BNC Written" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/brown> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BROWN" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/buckeye+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "BUCKEYE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/cambridge+english+profile+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEPC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/cc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ced> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CED" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ceec> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEEC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ceece> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEECE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ceecs> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEECS" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ceecsu> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEECSU" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ceem> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEEM" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/century+of+english+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CoEC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ceta> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CETA" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/chet> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CHET" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/cie> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CIE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/clep> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CLEP" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/clmep> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CLMEP" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/clmet> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CLMET" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/clmetev> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CLMETEV" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/cmepv> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CMEPV" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/cmsw> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CMSW" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/cnne> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CNNE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/coca> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "COCA" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/coerp> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "COERP" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/coha> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "COHA" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/colmobaeng> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "COLMOBAENG" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/colt> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "COLT" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/conce> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CONCE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/cooee> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "COOEE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/copc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "COPC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/corpus+of+med+quotations> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CMEDQ" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/corpus+of+spoken+american+english> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CSAE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/csc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CSC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/dcpse> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "DCPSE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/decte> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "DECTE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/dictionary+of+old+english+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "DOEC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/doe> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "DOE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/eLALME> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "eLALME" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/early+english+prose+fiction> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "EEPF" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/eighteenth+century+fiction> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ECF" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/elfa> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ELFA" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/elizabethan+and+jacobean+drama+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "EJDC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ememt> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "EMEMT" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/enpc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ENPC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ex-slave+recordings> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ESR" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/f-lob> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "F-LOB" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/fred> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "FRED" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/frown> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "Frown" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/google+books> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "GoogleBooks" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/hares-cam> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "HARES-CAM" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "HC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/hcos> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "HCOS" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/hd> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "HD" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ice> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ICE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ice-gb> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ICE-GB" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/innsbruck+corpus+of+middle+english+prose> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ICMEP" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/international+corpus+of+english+-+philippines> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ICE-Phil" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/jscc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "JSCC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/laeme> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LAEME" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/lamsas> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LAMSAS" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/lc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/lcicamet> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LCICAMET" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/leme> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LEME" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/literature+online> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LION" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/llc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LLC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/lmemt> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LMEMT" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/lob> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "LOB" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/meg-c> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "MEG-C" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/memt> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "MEMT" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/micase> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "MICASE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/micusp> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "MICUSP" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/middle+english+compendium> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "MEC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/middle+english+dictionary> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "MED" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/necte> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "NECTE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/newdigate+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "Newdigate" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/nineteenth+century+fiction> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "NCF" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/obc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "OBC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/old+english+dictionary> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "OED" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/origins+of+new+zealand+english> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ONZE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/oxford+shakespeare+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "OSC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/pceec> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "PCEEC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/philippine+brown+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "Phil-BROWN" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppceme> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "PPCEME" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppcmbe> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "PPCMBE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ppcme2> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "PPCME2" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/records+of+salem+witch+trials> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "SR" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/samana+english+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "SAM" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/sc> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "SC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/scone> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "SCONE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/scots> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "SCOTS" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/scps> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "SCPS" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/survey+of+english+usage> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "SEU" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/test+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "test1" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/the+augustan+prose+sample> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "APS" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/the+corpus+of+early+american+english> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "CEAE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/the+intermediate+archive> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "IA" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/the+kolhapur+corpus+of+indian+english> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "KOL" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/the+mobile+unit> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "MU" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/time> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "TIME" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/toronto+english+archive> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "TEA" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/voice> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "VOICE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/western+historical+manuscripts+collection> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "WHMC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/yccqa> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "YCCQA" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/ycoe> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "YCOE" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/york+english+corpus> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "YEC" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/york-helsinki+parsed+corpus+of+old+english+poetry> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "YCOEP" .
+
+<http://h224.it.helsinki.fi:8080/varieng/data/corpus/zen> a <http://h224.it.helsinki.fi:8080/varieng/types/Corpus> ;
+    rdfs:label "ZEN" .
+

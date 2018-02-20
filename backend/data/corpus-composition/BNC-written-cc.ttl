@@ -1,0 +1,53 @@
+@prefix qb4cc:          <http://data.hulib.helsinki.fi/ns/qb4cc#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dct:        	  <http://purl.org/dc/terms/> .
+@prefix foaf: 			    <http://xmlns.com/foaf/0.1/>.
+@prefix lcd: 			      <http://data.hulib.helsinki.fi/ns/lcd#>.
+@prefix :               <http://github.com/jkesanie/LCD/QB4CC#> .
+
+
+:bnc-ccd
+  a qb4cc:CorpusCompositionStructure ;
+  qb4cc:value [
+    rdfs:label "Word count" ;
+    qb:measure qb4cc:wordCount ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Corpus" ;
+    qb:dimension qb4cc:corpus ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Period" ;
+    qb:dimension qb4cc:timePeriod ;
+  ];
+.
+
+:bnc-written-ds
+  a qb4cc:CorpusComposition ;
+  dct:title "BNC written CC";
+  rdfs:label "BNC written CC";
+  dct:description "Taken from http://www.natcorp.ox.ac.uk/docs/URG/BNCdes.html#BNCcompo";
+  qb:structure :bnc-ccd ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/british+national+corpus+-+written> ;
+.
+
+# time period
+:BNCPeriod-X
+  a qb4cc:TimePeriod ;
+  rdfs:label "1960-1993";
+  lcd:startYear 1960 ;
+  lcd:endYear  1993 .
+
+
+:bnc-written-obs-1
+    a qb4cc:CorpusPart ;
+    qb4cc:isPartOfComposition :bnc-written-ds ;
+    qb4cc:timePeriod :BNCPeriod-X;
+    qb4cc:wordCount 87953932 ;
+    qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/british+national+corpus+-+written> ;
+  .

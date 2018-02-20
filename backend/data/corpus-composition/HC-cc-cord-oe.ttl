@@ -1,0 +1,1224 @@
+# HC - CoRD version - time period composition
+@prefix qb4cc:          <http://data.hulib.helsinki.fi/ns/qb4cc#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dct:        	  <http://purl.org/dc/terms/> .
+@prefix foaf: 			    <http://xmlns.com/foaf/0.1/>.
+@prefix lcd: 			      <http://data.hulib.helsinki.fi/ns/lcd#>.
+@prefix :               <http://github.com/jkesanie/LCD/QB4CC#> .
+
+
+# Corpus composition instance: HC
+
+:hc-cord1-oe-ccd
+  a qb4cc:CorpusCompositionStructure ;
+  qb4cc:value [
+    rdfs:label "Word count" ;
+    qb:measure qb4cc:wordCount ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Corpus" ;
+    qb:dimension qb4cc:corpus ;
+  ];
+  qb4cc:dimension [
+    rdfs:label "Period" ;
+    qb:dimension qb4cc:timePeriod ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Prototypical text category" ;
+    qb:dimension qb4cc:category ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Text type" ;
+      qb:dimension qb4cc:genre ;
+  ] ;
+  qb4cc:dimension [
+    rdfs:label "Text" ;
+      qb:dimension qb4cc:text ;
+  ] ;
+.
+:hc-cord1-oe-ds
+  a qb4cc:CorpusComposition ;
+  dct:title "HC corpus composition for Old English";
+  rdfs:label "HC corpus composition for Old English.";
+  dct:description "Data for the composition has been taken from http://www.helsinki.fi/varieng/CoRD/corpora/HelsinkiCorpus/oldenglish.html";
+  qb:structure :hc-cord1-oe-ccd ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+# time periods
+
+:OE1
+  a qb4cc:TimePeriod ;
+  rdfs:label "-850";
+  lcd:startYear 0 ;
+  lcd:endYear  850 .
+
+:OE2
+  a qb4cc:TimePeriod ;
+  rdfs:label "850-900";
+  lcd:startYear 850 ;
+  lcd:endYear  900 .
+
+:OE3
+  a qb4cc:TimePeriod ;
+  rdfs:label "950-1050";
+  lcd:startYear 950 ;
+  lcd:endYear  1050 .
+
+:OE4
+  a qb4cc:TimePeriod ;
+  rdfs:label "1050-1150";
+  lcd:startYear 1050 ;
+  lcd:endYear  1150 .
+
+
+:X
+  a skos:Concept ;
+  rdfs:label "X" ;
+  skos:prefLabel "X";
+  lcd:order 999;
+.
+
+# category
+
+
+:Statutory
+  a skos:Concept ;
+  rdfs:label "Statutory" ;
+  skos:prefLabel "Statutory";
+  lcd:order 1;
+.
+:Secular
+  a skos:Concept ;
+  rdfs:label "Secular instruction" ;
+  skos:prefLabel "Secular instruction";
+  lcd:order 2;
+.
+:ReligiousInstruction
+  a skos:Concept ;
+  rdfs:label "Religious instruction" ;
+  skos:prefLabel "Religious instruction";
+  lcd:order 3;
+.
+:Nonimaginative
+  a skos:Concept ;
+  rdfs:label "Nonimaginative narration" ;
+  skos:prefLabel "Nonimaginative narration";
+  lcd:order 4;
+.
+:Imaginative
+  a skos:Concept ;
+  rdfs:label "Imaginative narration" ;
+  skos:prefLabel "Imaginative narration";
+  lcd:order 5;
+.
+
+# genre
+
+:Law
+  a skos:Concept ;
+  rdfs:label "Law" ;
+  skos:prefLabel "Law";
+  lcd:order 1;
+.
+
+:Document
+  a skos:Concept ;
+  rdfs:label "Document" ;
+  skos:prefLabel "Document";
+  lcd:order 2;
+.
+
+:Handbook
+  a skos:Concept ;
+  rdfs:label "Handbook: medicine" ;
+  skos:prefLabel "Handbook: medicine";
+  lcd:order 3;
+.
+:HandbookAstronomy
+  a skos:Concept ;
+  rdfs:label "Handbook: astronomy" ;
+  skos:prefLabel "Handbook: astronomy";
+  lcd:order 4;
+.
+:Philosophy
+  a skos:Concept ;
+  rdfs:label "Philosophy" ;
+  skos:prefLabel "Philosophy";
+  lcd:order 5;
+.
+:Science
+  a skos:Concept ;
+  rdfs:label "Science: astronomy" ;
+  skos:prefLabel "Science: astronomy";
+  lcd:order 6;
+.
+:Homily
+  a skos:Concept ;
+  rdfs:label "Homily" ;
+  skos:prefLabel "Homily";
+  lcd:order 7;
+.
+:Rule
+  a skos:Concept ;
+  rdfs:label "Rule" ;
+  skos:prefLabel "Rule";
+  lcd:order 8;
+.
+
+:Religious
+  a skos:Concept ;
+  rdfs:label "Religious treatise" ;
+  skos:prefLabel "Religious treatise";
+  lcd:order 9;
+.
+:Preface
+  a skos:Concept ;
+  rdfs:label "Preface" ;
+  skos:prefLabel "Preface";
+  lcd:order 10;
+.
+:History
+  a skos:Concept ;
+  rdfs:label "History" ;
+  skos:prefLabel "History";
+  lcd:order 11;
+.
+:Biography
+  a skos:Concept ;
+  rdfs:label "Biography: life of saint" ;
+  skos:prefLabel "Biography: life of saint";
+  lcd:order 12;
+.
+:Geography
+  a skos:Concept ;
+  rdfs:label "Geography" ;
+  skos:prefLabel "Geography";
+  lcd:order 13;
+.
+:Travelogue
+  a skos:Concept ;
+  rdfs:label "Travelogue" ;
+  skos:prefLabel "Travelogue";
+  lcd:order 14;
+.
+:Fiction
+  a skos:Concept ;
+  rdfs:label "Fiction" ;
+  skos:prefLabel "Fiction";
+  lcd:order 15;
+.
+
+:Bible
+  a skos:Concept ;
+  rdfs:label "Bible" ;
+  skos:prefLabel "Bible";
+  lcd:order 16;
+.
+
+# observations
+:hc-cord1-obs1
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE1;
+  qb4cc:category :X ;
+  qb4cc:genre :Document ;
+  qb4cc:text "Documents 1" ;
+  qb4cc:wordCount 1960;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs2
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE1;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Cædmon's Hymn" ;
+  qb4cc:wordCount 40 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs3
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE1;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Bede's Death Song" ;
+  qb4cc:wordCount 30 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs4
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE1;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Ruthwell Cross" ;
+  qb4cc:wordCount 70 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs5
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE1;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Leiden Riddle" ;
+  qb4cc:wordCount 90 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs6
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Statutory ;
+  qb4cc:genre :Law ;
+  qb4cc:text "Alfred's Introduction to Laws" ;
+  qb4cc:wordCount  1950;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs7
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Statutory ;
+  qb4cc:genre :Law ;
+  qb4cc:text "Alfred's Laws" ;
+  qb4cc:wordCount  3300;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs8
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Statutory ;
+  qb4cc:genre :Law ;
+  qb4cc:text "Ine's Laws" ;
+  qb4cc:wordCount  2670;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs9
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :X ;
+  qb4cc:genre :Document ;
+  qb4cc:text "Documents 2" ;
+  qb4cc:wordCount  2360 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+
+:hc-cord1-obs10
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Secular ;
+  qb4cc:genre :Handbook ;
+  qb4cc:text "Læceboc" ;
+  qb4cc:wordCount 10420 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+:hc-cord1-obs11
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :X ;
+  qb4cc:genre :Philosophy ;
+  qb4cc:text "Alfred's Boethius" ;
+  qb4cc:wordCount 10920 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+:hc-cord1-obs12
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Alfred's Cura Pastoralis" ;
+  qb4cc:wordCount 17140 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+:hc-cord1-obs13
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :X ;
+  qb4cc:genre :Preface ;
+  qb4cc:text "Alfred's Preface to Cura Pastoralis" ;
+  qb4cc:wordCount 870 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs14
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :History ;
+  qb4cc:text "Chronicle MS A Early" ;
+  qb4cc:wordCount 13460 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs15
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :History ;
+  qb4cc:text "Bede's Ecclesiastical History" ;
+  qb4cc:wordCount 10170 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs16
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :History ;
+  qb4cc:text "Ohthere and Wulfstan MS L" ;
+  qb4cc:wordCount 410 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs17
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :History ;
+  qb4cc:text "Alfred's Orosius" ;
+  qb4cc:wordCount 8640 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+:hc-cord1-obs18
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :X ;
+  qb4cc:genre :Bible ;
+  qb4cc:text "Vespasian Psalter" ;
+  qb4cc:wordCount 9370 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs19
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE2;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Battle of Brunanburh" ;
+  qb4cc:wordCount 370 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs20
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Statutory ;
+  qb4cc:genre :Law ;
+  qb4cc:text "Laws (Eleventh Century)" ;
+  qb4cc:wordCount 6900 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs21
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Document ;
+  qb4cc:text "Documents 3" ;
+  qb4cc:wordCount 8030 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs22
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Secular ;
+  qb4cc:genre :Handbook ;
+  qb4cc:text "Lacnunga" ;
+  qb4cc:wordCount 2720 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs23
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Secular ;
+  qb4cc:genre :Handbook ;
+  qb4cc:text "Medicina de Quadrupedibus" ;
+  qb4cc:wordCount 4270 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs24
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Secular ;
+  qb4cc:genre :Science ;
+  qb4cc:text "Byrhtferth's Manual" ;
+  qb4cc:wordCount 4070 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs25
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Expository ;
+  qb4cc:genre :Science ;
+  qb4cc:text "Ælfric's De Temporibus Anni" ;
+  qb4cc:wordCount 5360 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs26
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Homily ;
+  qb4cc:text "Wulfstan's Homilies" ;
+  qb4cc:wordCount 6950 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs27
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Homily ;
+  qb4cc:text "The Blickling Homilies" ;
+  qb4cc:wordCount 10670 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs28
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Homily ;
+  qb4cc:text "Ælfric's Catholic Homilies (II)" ;
+  qb4cc:wordCount 3130 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs29
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Homily ;
+  qb4cc:text "Ælfric's Homilies (Suppl. II)" ;
+  qb4cc:wordCount 1720 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs30
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Rule ;
+  qb4cc:text "The Benedictine Rule" ;
+  qb4cc:wordCount 9970 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs31
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Rule ;
+  qb4cc:text "The Durham Ritual" ;
+  qb4cc:wordCount 10550 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs32
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Ælfric's Letters to Wulfstan" ;
+  qb4cc:wordCount 7960 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs33
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Ælfric's Letter to Sigefyrth" ;
+  qb4cc:wordCount 1500 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs34
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Preface ;
+  qb4cc:text "Ælfric's Preface to Cath. Hom. (I)" ;
+  qb4cc:wordCount 104 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs35
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Preface ;
+  qb4cc:text "Ælfric's Preface to Genesis" ;
+  qb4cc:wordCount 690 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs36
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Preface ;
+  qb4cc:text "Ælfric's Preface to Cath. Hom. (II)" ;
+  qb4cc:wordCount 220 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs37
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Preface ;
+  qb4cc:text "Ælfric's Preface to Lives of Saints" ;
+  qb4cc:wordCount 360 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs38
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Preface ;
+  qb4cc:text "Ælfric's Preface to Grammar" ;
+  qb4cc:wordCount 340 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs39
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :History ;
+  qb4cc:text "Chronicle MS A Late" ;
+  qb4cc:wordCount 670 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs40
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :History ;
+  qb4cc:text "Ohthere and Wulfstan MS G" ;
+  qb4cc:wordCount 1310 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs41
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :BiographyLife ;
+  qb4cc:text "Ælfric's Lives of Saints" ;
+  qb4cc:wordCount 6980 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs42
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :BiographyLife ;
+  qb4cc:text "Gregory's Dialogues MS H" ;
+  qb4cc:wordCount 5170 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs43
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :BiographyLife ;
+  qb4cc:text "Martyrology" ;
+  qb4cc:wordCount 10270 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs44
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Imaginative ;
+  qb4cc:genre :Geography ;
+  qb4cc:text "Marvels" ;
+  qb4cc:wordCount 1690 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs45
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Imaginative ;
+  qb4cc:genre :Travelogue ;
+  qb4cc:text "Alexander's Letter" ;
+  qb4cc:wordCount 7290 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs46
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :Imaginative ;
+  qb4cc:genre :Fiction ;
+  qb4cc:text "Apollonius of Tyre" ;
+  qb4cc:wordCount 6530 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs47
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Bible ;
+  qb4cc:text "The Old Testament (Heptateuch)" ;
+  qb4cc:wordCount 10240 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs48
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Bible ;
+  qb4cc:text "The Paris Psalter" ;
+  qb4cc:wordCount 8450 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs49
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Bible ;
+  qb4cc:text "West-Saxon Gospels" ;
+  qb4cc:wordCount 9920 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs50
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Bible ;
+  qb4cc:text "Lindisfarne Gospels" ;
+  qb4cc:wordCount 8750 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs51
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :Bible ;
+  qb4cc:text "Rushworth Gospels" ;
+  qb4cc:wordCount 10290 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+
+:hc-cord1-obs52
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Fates of Apostles" ;
+  qb4cc:wordCount 670 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs53
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Elene" ;
+  qb4cc:wordCount 7310 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs54
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Juliana" ;
+  qb4cc:wordCount 4130 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs55
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Genesis" ;
+  qb4cc:wordCount 4840 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs56
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Exodus" ;
+  qb4cc:wordCount 2980 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs57
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Christ" ;
+  qb4cc:wordCount 6130 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs58
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Kentish Hymn" ;
+  qb4cc:wordCount 230 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs59
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Kentish Psalm" ;
+  qb4cc:wordCount 840 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs60
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Andreas" ;
+  qb4cc:wordCount 4860 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs61
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Dream of the Rood" ;
+  qb4cc:wordCount 1110 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs62
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Wanderer" ;
+  qb4cc:wordCount 690 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs63
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Seafarer" ;
+  qb4cc:wordCount 770 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs64
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Widsith" ;
+  qb4cc:wordCount 850 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs65
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Fortunes of Men" ;
+  qb4cc:wordCount 550 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs66
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Maxims Id" ;
+  qb4cc:wordCount 1440 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs67
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Riming Poem" ;
+  qb4cc:wordCount 500 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs68
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Panther" ;
+  qb4cc:wordCount 390 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs69
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Whale" ;
+  qb4cc:wordCount 470 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs70
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Partridge" ;
+  qb4cc:wordCount 90 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs71
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Deor" ;
+  qb4cc:wordCount 230 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs72
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Wulf and Eadwacer" ;
+  qb4cc:wordCount 120 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs73
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Wife's Lament" ;
+  qb4cc:wordCount 320 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs74
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Beowulf" ;
+  qb4cc:wordCount 17310 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs75
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Riddles" ;
+  qb4cc:wordCount 5090 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs76
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Metrical Psalms of the Paris Psaltere" ;
+  qb4cc:wordCount 6720 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs77
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "Phoenix" ;
+  qb4cc:wordCount 3710 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs78
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE3;
+  qb4cc:category :X ;
+  qb4cc:genre :X ;
+  qb4cc:text "The Meters of Boethius" ;
+  qb4cc:wordCount 5,270 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+
+
+:hc-cord1-obs79
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Statutory ;
+  qb4cc:genre :Law ;
+  qb4cc:text "Late Laws" ;
+  qb4cc:wordCount 2100 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs80
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Statutory ;
+  qb4cc:genre :Law ;
+  qb4cc:text "William's Laws" ;
+  qb4cc:wordCount 220 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs81
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :X ;
+  qb4cc:genre :Document ;
+  qb4cc:text "Documents 4" ;
+  qb4cc:wordCount 2440 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs82
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Secular ;
+  qb4cc:genre :HandbookAstronomy ;
+  qb4cc:text "Prognostications" ;
+  qb4cc:wordCount 3350 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs82
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Secular ;
+  qb4cc:genre :Philosophy ;
+  qb4cc:text "Dicts of Cato" ;
+  qb4cc:wordCount 2080 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs83
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Homily ;
+  qb4cc:text "Wulfstan's Homilies" ;
+  qb4cc:wordCount 3290 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs84
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Homily ;
+  qb4cc:text "A Homily for the Sixth ... Sunday" ;
+  qb4cc:wordCount 1610 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs85
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Ælfric's Letter to Sigeweard" ;
+  qb4cc:wordCount 10180 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs86
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Ælfric's Letter to Wulfsige" ;
+  qb4cc:wordCount 3230 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs87
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Adrian and Ritheus" ;
+  qb4cc:wordCount 1090 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs88
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Solomon and Saturn" ;
+  qb4cc:wordCount 2010 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs89
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :ReligiousInstruction ;
+  qb4cc:genre :Religious ;
+  qb4cc:text "Vision of Leofric" ;
+  qb4cc:wordCount 1010 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs90
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :X ;
+  qb4cc:genre :Preface ;
+  qb4cc:text "Alfred's Preface to Soliloquies" ;
+  qb4cc:wordCount 440 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+
+:hc-cord1-obs91
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :History ;
+  qb4cc:text "Chronicle MS E" ;
+  qb4cc:wordCount 17620 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs92
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :BiographyLife ;
+  qb4cc:text "Chad" ;
+  qb4cc:wordCount 2650 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs93
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :BiographyLife ;
+  qb4cc:text "Gregory's Dialogues MS C" ;
+  qb4cc:wordCount 5100 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
+:hc-cord1-obs94
+  a qb4cc:CorpusPart ;
+  qb4cc:isPartOfComposition :hc-cord1-oe-ds ;
+  qb4cc:timePeriod :OE4;
+  qb4cc:category :Nonimaginative ;
+  qb4cc:genre :BiographyLife ;
+  qb4cc:text "A Passion of St Margaret" ;
+  qb4cc:wordCount 4200 ;
+  qb4cc:corpus <http://h224.it.helsinki.fi:8080/varieng/data/corpus/hc> ;
+.
